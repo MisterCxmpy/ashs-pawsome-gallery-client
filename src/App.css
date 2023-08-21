@@ -5,16 +5,3 @@
   text-align: center;
 }
 
-.media-container {
-  columns:3 250px;
-  gap:15px;
-  min-height: 100vh;
-}
-
-.media-item > img,
-.media-item > video,
-.media-item > video > source {
-  margin-bottom: 10px;
-  border-radius: 5px;
-  width: 100%;
-}

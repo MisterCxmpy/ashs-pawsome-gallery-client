@@ -1,10 +1,11 @@
 import React from 'react'
-import ReactPlaceholder from 'react-placeholder'
+import styles from './index.module.css'
 
-export default function Loading({children, ready}) {
+export default function Loading() {
   return (
-    <ReactPlaceholder type='rect' rows={6} ready={ready}>
-      {children}
-    </ReactPlaceholder>
+    <div className={styles['loading-container']}>
+      <div className={styles['loading']}></div>
+      <div className={styles['loading-text']}>loading</div>
+    </div>
   )
 }
