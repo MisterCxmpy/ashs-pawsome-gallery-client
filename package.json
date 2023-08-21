@@ -10,11 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "blurhash": "^2.0.5",
     "react": "^18.2.0",
-    "react-blurhash": "^0.3.0",
-    "react-dom": "^18.2.0",
-    "react-placeholder": "^4.1.0"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",

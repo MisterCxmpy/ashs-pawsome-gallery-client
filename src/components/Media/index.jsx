@@ -27,7 +27,7 @@ export default function Media() {
 
   return (
     <>
-      <div style={loading ? {display: "block"} : {display: "none"}}>
+      <div className={styles['loading']} style={loading ? {display: "block"} : {display: "none"}}>
         <Loading />
       </div>
       <div style={loading ? {display: "none"} : {display: "block"}} className={styles['media-container']}>

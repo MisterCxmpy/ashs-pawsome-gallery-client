@@ -71,6 +71,13 @@ button:focus-visible {
   }
 }
 
+video::-webkit-media-controls-volume-slider {
+  display:none;
+}
+
+video::-webkit-media-controls-mute-button {
+  display:none;
+}
 
 .rect-shape {
   height: 500px !important;
