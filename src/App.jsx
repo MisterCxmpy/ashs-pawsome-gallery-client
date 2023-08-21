@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import './App.css'
 import Media from './components/Media';
 import icon from "./assets/icon.png"
