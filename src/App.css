@@ -4,3 +4,15 @@
   padding: 2rem;
   text-align: center;
 }
+
+.title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.title > img {
+  height: 150px;
+  width: 150px;
+}
