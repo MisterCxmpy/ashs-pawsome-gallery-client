@@ -22,9 +22,6 @@ a {
   color: #646cff;
   text-decoration: inherit;
 }
-a:hover {
-  color: #535bf2;
-}
 
 body {
   margin: 0;
@@ -55,7 +52,7 @@ button:hover {
 }
 button:focus,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  outline: none;
 }
 
 @media (prefers-color-scheme: light) {
@@ -79,6 +76,6 @@ video::-webkit-media-controls-mute-button {
   display:none;
 }
 
-.rect-shape {
-  height: 500px !important;
+body.modal-open {
+  overflow: hidden;
 }

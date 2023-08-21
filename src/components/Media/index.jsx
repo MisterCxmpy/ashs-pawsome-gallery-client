@@ -26,12 +26,21 @@ export default function Media() {
     }, 5000);
   }, []);
 
+  useEffect(() => {
+    if (active) {
+      document.body.classList.add('modal-open');
+    } else {
+      document.body.classList.remove('modal-open');
+    }
+  }, [active])
+
 
   return (
     <>
       <div className={styles['loading']} style={loading ? {display: "block"} : {display: "none"}}>
         <Loading />
       </div>
+      {console.log(images.length)}
       {active ? 
         <div className={`${styles['modal']} ${active ? styles['active'] : ""}`}>
           <img src={active} alt="active image" />

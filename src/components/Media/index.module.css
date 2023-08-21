@@ -7,18 +7,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #000;
+  background: rgba(0, 0, 0, 0.9019607843);
   transition: opacity 0.4s, visibility 0.4s;
   visibility: hidden;
   opacity: 0;
   transform: scale(0);
-  overflow: hidden;
   z-index: 999;
 }
 .modal.active {
   visibility: visible;
   opacity: 1;
   transform: scale(1);
+  overflow: hidden;
 }
 .modal > img {
   width: auto;
@@ -51,4 +51,9 @@
   margin-bottom: 10px;
   border-radius: 5px;
   width: 100%;
+}
+.media-item > img:hover,
+.media-item > video:hover,
+.media-item > video > source:hover {
+  cursor: pointer;
 }/*# sourceMappingURL=index.module.css.map */
