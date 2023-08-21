@@ -6,7 +6,7 @@ export default function Media() {
   const [loading, setLoading] = useState(true);
   const [images, setImages] = useState([]);
 
-  const url = "http://localhost:3000/getImages";
+  const url = "https://ashs-pawsome-gallery-api.onrender.com/getImages";
 
   const getImages = async () => {
     setLoading(true);
@@ -33,7 +33,7 @@ export default function Media() {
       <div style={loading ? {display: "none"} : {display: "block"}} className={styles['media-container']}>
         {images.map((item, index) => (
           <div className={styles['media-item']} key={index}>
-            {item.format === 'jpg' || item.format === 'png' ? (
+            {item.format === 'jpg' || item.format === 'png' || item.format === 'gif' ? (
               <img
                 src={`https://drive.google.com/uc?export=view&id=${item.id}`}
                 alt="drive image"
