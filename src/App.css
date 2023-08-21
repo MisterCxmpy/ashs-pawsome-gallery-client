@@ -17,3 +17,12 @@
   height: 150px;
   width: 150px;
 }
+
+
+@media screen and (max-width: 600px) {
+
+  .title > img {
+    display: none;
+  }
+
+}
