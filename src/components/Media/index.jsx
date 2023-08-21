@@ -6,6 +6,8 @@ export default function Media() {
   const [loading, setLoading] = useState(true);
   const [images, setImages] = useState([]);
 
+  const [active, setActive] = useState("");
+
   const url = "https://ashs-pawsome-gallery-api.onrender.com/getImages";
 
   const getImages = async () => {
@@ -30,6 +32,12 @@ export default function Media() {
       <div className={styles['loading']} style={loading ? {display: "block"} : {display: "none"}}>
         <Loading />
       </div>
+      {active ? 
+        <div className={`${styles['modal']} ${active ? styles['active'] : ""}`}>
+          <img src={active} alt="active image" />
+          <button onClick={() => setActive(null)}>&times;</button>
+        </div> 
+      : null}
       <div style={loading ? {display: "none"} : {display: "block"}} className={styles['media-container']}>
         {images.map((item, index) => (
           <div className={styles['media-item']} key={index}>
@@ -37,6 +45,7 @@ export default function Media() {
               <img
                 src={`https://drive.google.com/uc?export=view&id=${item.id}`}
                 alt="drive image"
+                onClick={() => setActive(`https://drive.google.com/uc?export=view&id=${item.id}`)}
               />
             ) : (
               <video
@@ -46,6 +55,7 @@ export default function Media() {
                 <source
                   src={`https://drive.google.com/uc?export=view&id=${item.id}`}
                   type={`video/${item.format}`}
+                  onClick={() => setActive(`https://drive.google.com/uc?export=view&id=${item.id}`)}
                 />
               </video>
             )}
