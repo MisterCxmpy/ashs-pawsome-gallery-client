@@ -7,18 +7,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.9019607843);
+  background: rgba(0, 0, 0, 0.9450980392);
   transition: opacity 0.4s, visibility 0.4s;
   visibility: hidden;
   opacity: 0;
   transform: scale(0);
+  overflow: hidden;
   z-index: 999;
 }
 .modal.active {
   visibility: visible;
   opacity: 1;
   transform: scale(1);
-  overflow: hidden;
 }
 .modal > img {
   width: auto;

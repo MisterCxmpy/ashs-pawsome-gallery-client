@@ -64,7 +64,6 @@ export default function Media() {
                 <source
                   src={`https://drive.google.com/uc?export=view&id=${item.id}`}
                   type={`video/${item.format}`}
-                  onClick={() => setActive(`https://drive.google.com/uc?export=view&id=${item.id}`)}
                 />
               </video>
             )}

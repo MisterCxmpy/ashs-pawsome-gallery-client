@@ -7,19 +7,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #000000e6;
+  background: #000000f1;
   transition: opacity .4s, visibility .4s;
   visibility: hidden;
   opacity: 0;
   transform: scale(0);
-  
+  overflow: hidden;
   z-index: 999;
 
   &.active {
     visibility: visible;
     opacity: 1;
     transform: scale(1);
-    overflow: hidden;
   }
 
   > img {
