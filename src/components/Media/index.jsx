@@ -19,12 +19,27 @@ export default function Media() {
   };
 
   useEffect(() => {
-    getImages();
+    getImages()
+  }, [])
 
-    setTimeout(() => {
-      setLoading(false)
-    }, 5000);
-  }, []);
+  useEffect(() => {
+    const checkImagesLoaded = async () => {
+      if (!images.length) {
+        console.log("API is still warming up!");
+      } else {
+        clearInterval(interval);
+        setLoading(false);
+      }
+    };
+  
+    const interval = setInterval(checkImagesLoaded, 5000);
+  
+    return () => {
+      clearInterval(interval);
+    };
+  }, [images]);
+  
+  
 
   useEffect(() => {
     if (active) {
