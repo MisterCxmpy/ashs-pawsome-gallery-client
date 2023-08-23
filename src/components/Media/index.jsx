@@ -28,7 +28,9 @@ export default function Media() {
         console.log("API is still warming up!");
       } else {
         clearInterval(interval);
-        setLoading(false);
+        setTimeout(() => {
+          setLoading(false);
+        }, 5000);
       }
     };
   
