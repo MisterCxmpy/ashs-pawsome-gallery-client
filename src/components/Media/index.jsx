@@ -8,7 +8,7 @@ export default function Media() {
 
   const [active, setActive] = useState("");
 
-  const url = "https://ashs-pawsome-gallery-api.onrender.com/getImages";
+  const url = "https://ashs-pawsome-gallery-server.vercel.app/images";
 
   const getImages = async () => {
     setLoading(true);
