@@ -57,10 +57,9 @@ export default function Media() {
       <div className={styles['loading']} style={loading ? {display: "block"} : {display: "none"}}>
         <Loading />
       </div>
-      {console.log(images.length)}
       {active ? 
         <div className={`${styles['modal']} ${active ? styles['active'] : ""}`}>
-          <img src={active} alt="active image" />
+          <img crossorigin="anonymous" src={active} alt="active image" />
           <button onClick={() => setActive(null)}>&times;</button>
         </div> 
       : null}
@@ -69,17 +68,19 @@ export default function Media() {
           <div className={styles['media-item']} key={index}>
             {item.format === 'jpg' || item.format === 'png' || item.format === 'gif' ? (
               <img
-                src={`https://drive.google.com/uc?export=view&id=${item.id}`}
-                alt="drive image"
-                onClick={() => setActive(`https://drive.google.com/uc?export=view&id=${item.id}`)}
+                crossorigin="anonymous"
+                src={`https://drive.lienuc.com/uc?export=view&id=${item.id}`}
+                alt="If image not showing Google broke the API."
+                onClick={() => setActive(`https://drive.lienuc.com/uc?export=view&id=${item.id}`)}
               />
             ) : (
               <video
                 controls
                 muted
+                crossorigin="anonymous"
               >
                 <source
-                  src={`https://drive.google.com/uc?export=view&id=${item.id}`}
+                  src={`https://drive.lienuc.com/uc?export=view&id=${item.id}`}
                   type={`video/${item.format}`}
                 />
               </video>
